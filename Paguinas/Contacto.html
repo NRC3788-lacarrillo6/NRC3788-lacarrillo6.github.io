@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="form-container text-center">
+        <h2>Contacto</h2>
+        <form name="FormContacto" onsubmit="return validar()" method="post">
+           
+
+
+        
+        <div class="input-group">
+
+            <div class="form-group">
+                <label for="email" style="right: 0;;">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="&#9993; usuario@mail.com">
+            </div>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="fechaNacimiento">
+       
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" class="form-control" id="telefono" placeholder="&#9742; Teléfono">
+        </div>
+        <input type="button" id="enviar-btn" class="submit-btn" value="Enviar" onclick="enviarFormulario(this)">
+        </div>
+           
+        
+           
+        </form>
+    </div>
+
+    <script src="scrip.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+</head>
+<body>
+
+    <div class="container">
+		<div class="col-sm-10" style="width: 400px; margin-left: 250px; margin-top: 50px;" style="justify-content: center;">
+			<div class="jumbotron">
+				<div class="form-group" style="margin-top: -50px;">
+					<h2 >
+						<center>Contacto<center>
+					</h2>
+				</div>
+
+				<form>
+                    <div class="form-group">
+                        <div>
+                            <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="&#9993; usuario@mail.com">
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" id="fechaNacimiento">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="&#9742; Teléfono">
+                    </div>
+                    <button type="submit" class="btn btn-warning" style="border-radius: 20px; width: 300px;">Enviar</button>
+                </form>
+		    </div>
+		</div>
+   	</div>
+
+       <script>
+        function validar() {
+            // Validación de correo electrónico
+            var email = document.getElementById('email').value;
+            var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+            if (!expresion.test(email)) {
+                alert('Por favor, ingrese un correo electrónico válido.');
+                return false;
+            }
+
+            // Validación de teléfono
+            var telefono = document.getElementById('telefono').value;
+            if (telefono.length !== 10 || isNaN(telefono)) {
+                alert('Por favor, ingrese un número de teléfono válido de 10 dígitos.');
+                return false;
+            }
+
+            // Si todas las validaciones son exitosas
+            return true;
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
